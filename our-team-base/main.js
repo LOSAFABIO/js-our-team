@@ -72,17 +72,22 @@ for(i=1; i<team.length; i++){
   </div>`
 };
 
+let nameProfilo  = document.getElementById('name').value = " ";
+  
+let roleProfilo  = document.getElementById("role").value = " ";
+
+let imageProfilo = document.getElementById("image").value = " ";
 
 let addProfilo   = document.getElementById("addMemberButton")
 
-let nameProfilo  = document.getElementById("name").value;
-
-let roleProfilo  = document.getElementById("role").value;
-
-let imageProfilo = document.getElementById("image").value;
-
 addProfilo.addEventListener("click" , function(){
   
+  nameProfilo  = document.getElementById("name").value;
+  
+  roleProfilo  = document.getElementById("role").value;
+  
+  imageProfilo = document.getElementById("image").value;
+
   let nuovoProfilo = {
     name   : nameProfilo,
     role   : roleProfilo,
