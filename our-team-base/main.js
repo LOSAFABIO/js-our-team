@@ -72,22 +72,43 @@ for(i=1; i<team.length; i++){
   </div>`
 };
 
-let nameProfilo  = document.getElementById(".name");
 
-let textProfilo  = document.getElementById(".text");
+let addProfilo   = document.getElementById("addMemberButton")
 
-let imageProfilo = document.getElementById(".image");
+let nameProfilo  = document.getElementById("name").value;
 
-let addProfilo = document.getElementById("addMemberButton")
+let roleProfilo  = document.getElementById("role").value;
+
+let imageProfilo = document.getElementById("image").value;
 
 addProfilo.addEventListener("click" , function(){
-
+  
   let nuovoProfilo = {
-    name  :  nameProfilo,
-    text  :  textProfilo,
-    image :  imageProfilo
-  };
+    name   : nameProfilo,
+    role   : roleProfilo,
+    image  : imageProfilo
+}
 
+team.push(nuovoProfilo);
+
+for(i=0; i<1; i++){
+
+  container.innerHTML += 
+  `<div class="team-card">
+      <div class="card-image">
+        <img
+            src="${imageProfilo}"
+            alt="${nameProfilo}"
+        />
+        </div>
+        <div class="card-text">
+        <h3>${nameProfilo}</h3>
+        <p>${roleProfilo}</p>
+      </div>
+  </div>`
+};
+
+  team.push(nuovoProfilo)
 })
 
 console.log(team);
